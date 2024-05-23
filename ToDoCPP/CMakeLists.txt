@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 
 project(ToDoCPP VERSION 0.1 LANGUAGES CXX)
 
+set(CMAKE_PREFIX_PATH "C:/Qt/6.7.0/msvc2019_64")
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -23,6 +25,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(ToDoCPP
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        resources/styles.qss
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET ToDoCPP APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -1,16 +1,23 @@
 #include "mainwindow.h"
-
 #include <QApplication>
+#include <QWidget>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QLabel>
+#include <QFile>
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    MainWindow w;
-    QPalette pal = QPalette();
-    pal.setColor(QPalette::Window, Qt::black);
-    w.setAutoFillBackground(true);
-    w.setPalette(pal);
+int main(int argc, char *argv[]) {
+    QApplication app(argc, argv);
 
-    w.show();
-    return a.exec();
+
+    // QFile styleFile("resources/styles.qss");
+    // styleFile.open(QFile::ReadOnly);
+    // QString styleQSS = styleFile.readAll();
+
+    // app.setStyleSheet(styleQSS);
+
+    MainWindow window;
+
+    window.show();
+    return app.exec();
 }
