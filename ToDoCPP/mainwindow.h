@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QListWidget>
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -26,6 +27,11 @@ private:
     QListWidget *thursdayList;
     QListWidget *fridayList;
     QListWidget *saturdayList;
-    QListWidget *sundayList;
+    QPushButton *mondayButton;
+    QPushButton *tuesdayButton;
+    QPushButton *wednesdayButton;
+    QPushButton *thursdayButton;
+    QPushButton *fridayButton;
+    QPushButton *saturdayButton;
 };
 #endif // MAINWINDOW_H

@@ -9,13 +9,13 @@
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
-
-    // QFile styleFile("resources/styles.qss");
-    // styleFile.open(QFile::ReadOnly);
-    // QString styleQSS = styleFile.readAll();
-
-    // app.setStyleSheet(styleQSS);
-
+    QFile file(":/resources/styles.qss");
+    if (file.open(QFile::ReadOnly)) {
+        QString styleSheet = QLatin1String(file.readAll());
+        app.setStyleSheet(styleSheet);
+    } else {
+        qWarning("Could not open stylesheet file");
+    }
     MainWindow window;
 
     window.show();
